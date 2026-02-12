@@ -5,7 +5,7 @@ message = input("Paste Message Here: ")
 
 #Sending a POST request to the Flask app
 import requests
-response = requests.post("http://127.0.0.1:5000/predict", json={"message": message})
+response = requests.post("https://spam-detector-znos.onrender.com/predict", json={"message": message})
 # print(response.json())
 
 if response.json()["prediction"] == "Spam":
