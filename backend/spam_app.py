@@ -7,8 +7,8 @@ import re
 app = Flask(__name__)
 CORS(app)
 
-model = joblib.load(r"model\spam_detector.pkl")
-vectorizer = joblib.load(r"model\spam_vectorizer.pkl")
+model = joblib.load("model\spam_detector.pkl")
+vectorizer = joblib.load("model\spam_vectorizer.pkl")
 
 #Function to remove punctuation, numbers, and convert to lowercase
 def clean_text(text):
